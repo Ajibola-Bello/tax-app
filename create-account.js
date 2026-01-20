@@ -74,7 +74,7 @@ form.addEventListener("submit", async function (e) {
 
     // Move to email verification screen
     setTimeout(() => {
-      window.location.href = "email.html";
+      window.location.href = "login.html";
     }, 1000);
   } catch (error) {
     errorMsg.textContent = "Network error. Please try again." + error;
