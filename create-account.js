@@ -58,6 +58,14 @@ form.addEventListener("submit", async function (e) {
         // Save user info for later screens
         // localStorage.setItem("userId", data.user._id || data.user.id);
         // localStorage.setItem("token", data.token);
+        if (data.user?.id || data.user?._id) {
+      localStorage.setItem("userId", data.user.id || data.user._id);
+    }
+
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+    }
+
 
         errorMsg.style.color = "green";
         errorMsg.textContent = "Account created successfully!"+data.message;
